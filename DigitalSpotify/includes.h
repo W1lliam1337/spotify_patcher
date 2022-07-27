@@ -5,7 +5,7 @@
 #include <array>
 #include <string>
 #include <iostream>
-#include <minhook.h>
+#include <MinHook.h>
 #include <cstdio>
 #include <intrin.h>
 
