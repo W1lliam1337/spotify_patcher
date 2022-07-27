@@ -33,7 +33,7 @@ void __fastcall hooks::create_track(void* ecx, void* edx, ctx::structs::player_m
 		a4 = 30.0; // or some other greater value
 
 	#ifdef _DEBUG
-		printf("[ spotify ] track uri: %s, speed: %f, type: %s, stream type: %s, urgency: %s, track_select_flag: %d\n", a3->m_track_uri, a4, utils::get_type(a5), utils::get_steam_type(a9), utils::get_urgency(a6), a7);
+		printf("[ spotify ] track uri: %s, speed: %f, type: %s, stream type: %s, urgency: %s, track_select_flag: %d\n", a3->m_track_uri, a4, utils::get_type(a5), utils::get_stream_type(a9), utils::get_urgency(a6), a7);
 	#elif NDEBUG
 		printf("[ spotify ] speed: %f, type: %s, stream type: %s, urgency: %s, track_select_flag: %d\n", a4, utils::get_type(a5), utils::get_steam_type(a9), utils::get_urgency(a6), a7);
 	#endif
