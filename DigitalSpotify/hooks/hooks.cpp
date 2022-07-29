@@ -7,9 +7,17 @@ void hooks::instance()
 
 	static const auto create_track_target = static_cast<void*>(utils::find_sig(ctx::modules::m_spotify_image, "68 ? ? ? ? B8 ? ? ? ? E8 ? ? ? ? 89 8D ? ? ? ? 8B 45 18"));
 	static const auto playback_track_target = static_cast<void*>(utils::find_sig(ctx::modules::m_spotify_image, "6A 70 B8 ? ? ? ? E8 ? ? ? ? 8B D9 8B 45 14"));
+	static const auto unk_target = static_cast<void*>(reinterpret_cast<uint8_t*>(0x6A8BF9));
 
 	HOOK(create_track_target, create_track, og::m_create_track);
+	HOOK(unk_target, unk_sub, og::m_unk_sub);
 	//HOOK(playback_track_target, playback_track, og::m_playback_track);
+}
+
+int __cdecl hooks::unk_sub(int a1, int arg4)
+{
+	// @note: removes extra ads (advertiser, title, duration, ad_type, test_ad, non_explicit, skippable, line_item_id etc)
+	return 0;
 }
 
 void __fastcall hooks::create_track(void* ecx, void* edx, ctx::structs::player_meta_t* a2,  

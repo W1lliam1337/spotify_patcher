@@ -5,9 +5,10 @@
 #include <array>
 #include <string>
 #include <iostream>
-#include <MinHook.h>
 #include <cstdio>
 #include <intrin.h>
+#include <MinHook.h>
+#pragma comment( lib, "MinHook.lib" )
 
 namespace ctx
 {
