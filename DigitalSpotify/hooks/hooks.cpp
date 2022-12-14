@@ -106,7 +106,7 @@ void __fastcall hooks::create_track( void* ecx, void* edx, ctx::structs::player_
 #ifdef _DEBUG
 	printf( "[ spotify ] track uri: %s, speed: %f, type: %s, stream type: %s, urgency: %s, track_select_flag: %d\n", a3->m_track_uri, speed, utils::get_type( a5 ), utils::get_stream_type( a9 ), utils::get_urgency( a6 ), a7 );
 #elif NDEBUG
-	printf( "[ spotify ] speed: %f, type: %s, stream type: %s, urgency: %s, track_select_flag: %d\n", a4, utils::get_type( a5 ), utils::get_stream_type( a9 ), utils::get_urgency( a6 ), a7 );
+	printf( "[ spotify ] speed: %f, type: %s, stream type: %s, urgency: %s, track_select_flag: %d\n", speed, utils::get_type( a5 ), utils::get_stream_type( a9 ), utils::get_urgency( a6 ), a7 );
 #endif
 
 	og::m_create_track( ecx, edx, a2, a3, speed, a5, a6, a7, a8, a9 );
